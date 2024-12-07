@@ -1,5 +1,4 @@
 import streamlit as st
-from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from collections import Counter
 import pandas as pd
@@ -60,12 +59,6 @@ def load_text_data(directory):
 # 텍스트 데이터 로드
 directory_path = "/content/drive/MyDrive/워드클라우드/txt파일"  # 텍스트 파일이 저장된 폴더
 text_data = load_text_data(directory_path)
-
-# 워드클라우드 생성 함수
-def generate_wordcloud(text):
-    wc = WordCloud(width=800, height=400, background_color="white", stopwords=stopwords)
-    wc.generate(text)
-    return wc
 
 # 단어 빈도 계산 함수
 def get_word_frequencies(text):
